@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="SMU Skatathon 2023 - Singapore's only inline skating marathon" />
+  <title>SMU Skatathon 2023</title>
+  <!-- Opengraph-->
+  <meta property="og:title" content="SMU Skatathon 2023" />
+  <meta property="og:description" content="SMU Skatathon 2023 - Singapore's only inline skating marathon" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://smuskatathon.github.io/" />
+  <meta property="og:image" content="https://smuskatathon.github.io/assets/ogp.png" />
+  <!-- Favicon-->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="assets/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="assets/favicon-128.png" sizes="128x128" />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-light" style="font-family: 'Racing Sans One';" href="#">SMU SKATATHON 2023</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#details">Details</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#guide">e-Guide</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#register">Register</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#sponsors">Sponsors</a></li>
+        </ul>
+        <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
+          data-bs-target="#feedbackModal">
+          <span class="d-flex align-items-center">
+            <i class="bi-chat-text-fill me-2"></i>
+            <span class="small">Follow Us!</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Display if user does not have JS enabled-->
+  <noscript>
+    <div class="no-script">
+      <div class="container">
+        For full functionality of this site it is necessary to enable JavaScript.
+        Here are the <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable
+          JavaScript in your web browser</a>.
+      </div>
+    </div>
+  </noscript>
+
+  <div class="container-fluid fill-height gx-0 py-0 bg-dark d-flex flex-column">
+    <!-- Hero banner-->
+    <img id="banner" class="img-fluid" src="assets/img/hero.webp">
+
+    <!-- Countdown Timer + Confetti-->
+    <div id="countdown-container" class="container text-center d-flex flex-column flex-grow-1 justify-content-center">
+      <div class="row justify-content-center">
+        <div class="col">
+          <div id="days" class="countdown-value"></div>
+          <div class="countdown-label">days</div>
+        </div>
+        <div class="col">
+          <div id="hours" class="countdown-value"></div>
+          <div class="countdown-label">hours</div>
+        </div>
+        <div class="col">
+          <div id="minutes" class="countdown-value"></div>
+          <div class="countdown-label">minutes</div>
+        </div>
+        <div class="col">
+          <div id="seconds" class="countdown-value"></div>
+          <div class="countdown-label">seconds</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="text" id="search-input" class="form-control rounded-pill" placeholder="Enter your bib number">
+                <div class="input-group-append">
+                    <button id="search-btn" class="btn btn-primary rounded-pill" type="button">Search</button>
+                </div>
+            </div>
+            <ul id="results" class="list-group mt-3"></ul>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Race details section(s)-->
+  <!-- Part 1: Overview-->
+  <section id="details" class="bg-light">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+        <div class="col-12 col-lg-5">
+          <h2 class="display-4 lh-1 mb-4" style="font-family: 'Racing Sans One';">SMU<br>SKATATHON 2023</h2>
+          <h3>Singapore's ONLY inline skating marathon</h3>
+          <p class="lead fw-normal text-muted">
+            Skatathon 2023 is the fifth official skating marathon held by the SMUX Skating Team.
+            Join us on 10th September for a thrilling challenge and a day filled with skating excitement.
+            With three categories for skaters of all levels, it's an event you don't want to miss.
+          </p>
+        </div>
+        <div class="col-sm-8 col-md-6">
+          <div class="py-5 px-2 px-sm-0">
+            <div id="carousel-skatathon" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-skatathon" data-bs-slide-to="0" class="active"
+                  aria-current="true"></button>
+                <button type="button" data-bs-target="#carousel-skatathon" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-skatathon" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carousel-skatathon" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carousel-skatathon" data-bs-slide-to="4"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/carousel_skatathon_2019_1.webp" class="d-block w-100 rounded-4"
+                    alt="Skatathon 2019">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/carousel_skatathon_2018_1.webp" class="d-block w-100 rounded-4"
+                    alt="Skatathon 2018">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/carousel_skatathon_2019_2.webp" class="d-block w-100 rounded-4"
+                    alt="Skatathon 2019">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/carousel_skatathon_2019_3.webp" class="d-block w-100 rounded-4"
+                    alt="Skatathon 2019">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/carousel_skatathon_2019_4.webp" class="d-block w-100 rounded-4"
+                    alt="Skatathon 2019">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-skatathon"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel-skatathon"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <p class="fw-normal text-muted text-center mt-2">A snapshot of past Skatathons</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mark your calendars-->
+    <div class="container pt-5 px-5">
+      <div class="row align-items-center justify-content-center justify-content-lg-between text-center">
+        <div class="col-lg-4">
+          <h1 class="display-2 lh-1 mb-4" style="font-family: 'Racing Sans One';">
+            MARK YOUR CALENDARS
+          </h1>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/img/content_details.webp" class="img-fluid"
+            alt="10 September 2023, from 0700h to 1300h, at East Coast Park.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Part 2: Details-->
+  <section id="guide" class="bg-dark">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+        <div class="col-12 col-lg-5 order-md-1">
+          <h2 class="display-4 lh-1 mb-4 text-light" style="font-family: 'Racing Sans One';">RACE E-GUIDE</h2>
+          <h3 class="text-light">All the information you need in one handout</h3>
+          <p class="lead fw-normal text-muted">
+            Download SMU Skatathon's Race e-Guide to access detailed information
+            about the race, program highlights, the race route, and much more!
+            The e-Guide provides you with the necessary knowledge for a great Skatathon.
+          </p>
+          <button class="btn btn-outline-light py-3 px-4 rounded-pill"
+            onclick="location.href = 'https://www.canva.com/design/DAFl6QAC_-A/4gk8OQSalznotVumhk_VnQ/view'">
+            View Here
+          </button>
+        </div>
+        <div class="col-sm-8 col-md-6 order-md-0">
+          <div class="py-5 px-2 px-sm-0">
+            <img class="img-fluid rounded-4" src="assets/img/content_urban.webp"
+              alt="SMUX Skating Chinatown Urban Session" />
+            <p class="fw-normal text-muted text-center mt-2">A fun, family adventure for all!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entitlements and Race Categories section-->
+  <section id="categories" class="bg-light">
+    <div class="container px-5">
+      <div class="row gx-5">
+        <div class="col">
+          <h2 class="display-4 lh-1 mb-4" style="font-family: 'Racing Sans One';">CATEGORIES</h2>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col px-0 px-lg-5 pb-3 mx-lg-5">
+          <img id="img-categories" class="img-fluid" src="assets/img/categories.webp"
+            alt="Categories: 5km - $25 (Early Bird) / $30, 21.1km - $40 (Early Bird) / $50, 42.2km - $45 (Early Bird) / $55">
+        </div>
+      </div>
+      <div class="row gx-5 pt-5">
+        <div class="col">
+          <h2 class="display-4 lh-1 mb-4" style="font-family: 'Racing Sans One';">RACE PACK</h2>
+        </div>
+      </div>
+      <div class="row gx-5 align-items-center">
+        <div class="col-12 mb-5 mb-lg-0">
+          <!-- Race Pack items-->
+          <div class="container-fluid px-5">
+            <div class="row row-cols-1 row-cols-md-3 gx-5">
+              <div class="col text-center">
+                <img class="img-fluid rounded-4" src="assets/img/entitlements_voucher.webp" alt="Vouchers" />
+              </div>
+              <div class="col mb-5 text-center order-md-4">
+                <h3 class="font-alt">Vouchers</h3>
+              </div>
+              <div class="col text-center">
+                <img class="img-fluid rounded-4" src="assets/img/entitlements_consumables.webp" alt="Assorted Snacks" />
+              </div>
+              <div class="col mb-5 text-center order-md-5">
+                <h3 class="font-alt">Drinks & Snacks</h3>
+              </div>
+              <div class="col text-center">
+                <img class="img-fluid rounded-4" src="assets/img/entitlements_towels.webp" alt="Microfibre Towel" />
+              </div>
+              <div class="col mb-5 text-center order-md-last">
+                <h3 class="font-alt">Microfibre Towel</h3>
+              </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 gx-5">
+              <div class="col text-center">
+                <img class="img-fluid rounded-4" src="assets/img/entitlements_bag.webp" alt="Quecha Bag" />
+              </div>
+              <div class="col mb-5 text-center order-md-4">
+                <h3 class="font-alt">Race Bag</h3>
+              </div>
+              <div class="col text-center">
+                <img class="img-fluid rounded-4" src="assets/img/entitlements_bottle.webp" alt="Water Bottle" />
+              </div>
+              <div class="col mb-5 text-center order-md-5">
+                <h3 class="font-alt">Water Bottle</h3>
+              </div>
+              <div class="col text-center">
+                <img class="img-fluid rounded-4" src="assets/img/entitlements_racebib.webp" alt="Race Bib & Medal" />
+              </div>
+              <div class="col mb-5 text-center order-md-last">
+                <h3 class="font-alt">Race Bib & Finisher Medal</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action section (aka. Register Now)-->
+  <section class="cta" id="register">
+    <div class="cta-content">
+      <div class="container px-5">
+        <h2 class="text-light display-1 lh-1" style="font-family: 'Racing Sans One';">REGISTER NOW!</h2>
+        <p class="fw-normal text-light mt-2 mb-4" id="txt-register">Event's over! See you again next year!</p>
+        <button class="btn btn-outline-light py-3 px-4 rounded-pill" disabled
+          onclick="location.href = 'https://www.eventbrite.com/e/skatathon-2023-singapore-tickets-662741356237'">
+          Register Now!
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ section-->
+  <section id="faq" class="bg-dark">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+        <div class="col">
+          <h3 class="display-6 text-light mb-3" style="font-family: 'Racing Sans One';">FREQUENTLY ASKED QUESTIONS</h3>
+          <ul class="list-unstyled text-light">
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQWhat" aria-expanded="false"
+                aria-controls="FAQWhat"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; What time do I report for
+                Skatathon?</a>
+              <div id="FAQWhat" class="collapse">
+                View our Race e-guide for the respective reporting times for our races. You are recommended to arrive at
+                least 15 minutes earlier. Latecomers may not be allowed to participate due to safety reasons.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQUnder18" aria-expanded="false"
+                aria-controls="FAQUnder18"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp;
+                If I'm under the age of 18, what do I need to do for the Risk Acknowledgment form?</a>
+              <div id="FAQUnder18" class="collapse">
+                You <u>MUST</u> bring a physical copy of the Risk Acknowledgement form that is SIGNED by your parent /
+                legal guardian. We have the right to refuse entry if you cannot provide it on race day.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQWhichWave"
+                aria-expanded="false" aria-controls="FAQWhichWave"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp;
+                How do I know which wave I am assigned to?</a>
+              <div id="FAQWhichWave" class="collapse">
+                Each participant would be assigned a race bib number after registering on race day. Participants will be
+                assigned to the waves according to their race bib numbers.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQEntryAccepted"
+                aria-expanded="false" aria-controls="FAQEntryAccepted"><i
+                  class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; How do I know if my entry has been accepted?</a>
+              <div id="FAQEntryAccepted" class="collapse">
+                You will receive an email confirmation slip upon your successful registration.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQRefund" aria-expanded="false"
+                aria-controls="FAQRefund"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; Do I get a refund if I
+                choose not to participate after registration?</a>
+              <div id="FAQRefund" class="collapse">
+                Tickets are non-refundable and cannot be exchanged or transferred.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQMinAge" aria-expanded="false"
+                aria-controls="FAQMinAge"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; What is the minimum age
+                to participate in Skatathon 2023?</a>
+              <div id="FAQMinAge" class="collapse">
+                All age groups are welcome. However, with the safety of our younger participants in mind, we urge
+                parents to assess the suitability of the event for their children based on their skating abilities and
+                endurance levels. For skaters under the age of 18, the physical copy of our indemnity form with parental
+                consent must be shown at the point of registration. You may print the PDF version found in registration
+                form, or our confirmation email.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQHelmet" aria-expanded="false"
+                aria-controls="FAQHelmet"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; I do not have a helmet.
+                Can I still join Skatathon?</a>
+              <div id="FAQHelmet" class="collapse">
+                Helmets are <u>compulsory</u> to participate in Skatathon. Skaters must show their helmets at
+                registration, or they would be turned away.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQRain" aria-expanded="false"
+                aria-controls="FAQRain"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; What happens if it
+                rains?</a>
+              <div id="FAQRain" class="collapse">
+                Seek immediate shelter! We will wait out and give some time for the floor to dry up. If the rain
+                persists till 10:30am, the race will unfortunately be cancelled <u>without refunds</u>. Please refer to
+                the e-guide for more information regarding wet weather plans.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQBringAnything"
+                aria-expanded="false" aria-controls="FAQBringAnything"><i
+                  class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; Do I need to bring anything while skating?</a>
+              <div id="FAQBringAnything" class="collapse">
+                Bring: Your own skates, water bottle, Helmet, and your handphone. You are recommended to pack light and
+                bring your valuables along with you while you skate, as there will not be any designated areas to place
+                your bags.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQInjured" aria-expanded="false"
+                aria-controls="FAQInjured"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; What if I am injured, or
+                am not able to complete my Skatathon route?</a>
+              <div id="FAQInjured" class="collapse">
+                Please approach the nearest first aid points or bicycle sweepers along the route. If not, call the
+                safety number behind the race bib. We will also broadcast the safety number on our Facebook and
+                Instagram nearer to the race day.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQProof" aria-expanded="false"
+                aria-controls="FAQProof"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; How do I show proof of
+                race completion?</a>
+              <div id="FAQProof" class="collapse">
+                Finisher medals are only given to participants who completed the race. Wrist bands collected at U-turn
+                points are proof of race completion, and would be exchanged for the finisher medal.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQCutOff" aria-expanded="false"
+                aria-controls="FAQCutOff"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; Is there a cut-off point
+                for the race?</a>
+              <div id="FAQCutOff" class="collapse">
+                Participants who do not return by 12:30pm would not have their timings recorded.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQCollection"
+                aria-expanded="false" aria-controls="FAQCollection"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp;
+                When do I collect my gift bags and finisher medal?</a>
+              <div id="FAQCollection" class="collapse">
+                Gift bags would be given out together with the finisher medal when you have completed the race. All
+                skaters would receive the gift bag regardless of race completion. Finisher medals are only given to
+                skaters who completed the race.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQTiming" aria-expanded="false"
+                aria-controls="FAQTiming"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; When will I know my
+                timing?</a>
+              <div id="FAQTiming" class="collapse">
+                Race timings are timed manually and will be posted on our Instagram page before 17 September 2023.
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li class="mb-3">
+              <a class="lead fw-normal link-unstyled" data-bs-toggle="collapse" href="#FAQPrizes" aria-expanded="false"
+                aria-controls="FAQPrizes"><i class="bi-caret-down-fill"></i>&nbsp;&nbsp;&nbsp; Are there prizes for
+                individual categories?</a>
+              <div id="FAQPrizes" class="collapse">
+                As Skatathon is an inclusive event for skaters of different age groups and skating proficiencies, it is
+                not a competitive event and there are no prizes for individual categories. However, we have a
+                complimentary race pack for all participants and attractive prizes to win in our giveaways!
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors section-->
+  <section id="sponsors" class="bg-light">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+        <div class="col">
+          <h2 class="display-4 lh-1 mb-4" style="font-family: 'Racing Sans One';">SPONSORS</h2>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <div class="col-12 mb-5 mb-lg-0">
+          <div class="container-fluid px-5">
+            <div class="row row-cols-1 row-cols-md-2 gx-5 align-items-center justify-content-center">
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_smu.webp" alt="Singapore Management University" />
+              </div>
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_ernsports.webp" alt="Ernsports" />
+              </div>
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_tmcf.webp" alt="Tokyo Milk Cheese Factory Singapore" />
+              </div>
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_allforu.webp" alt="AllForU" />
+              </div>
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_ribena.png" alt="Ribena" />
+              </div>
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_lumos.webp" alt="Lumos" />
+              </div>
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_kingdom_food_group.webp" alt="Kingdom Food Group" />
+              </div>
+              <div class="col d-flex align-items-center justify-content-center">
+                <img class="img-fluid py-5" src="assets/img/logo_gorental.png" alt="GoRental" />
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+              <div class="col-12 order-last gy-5">
+                <p class="text-center">More sponsor details coming soon!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixed Buttons-->
+  <div class="buttons-container">
+    <button class="btn btn-dark btn-circle mid"
+      onclick="location.href = 'https://www.canva.com/design/DAFl6QAC_-A/4gk8OQSalznotVumhk_VnQ/view'"></button>
+    <button class="btn btn-dark btn-circle bot" onclick="location.href = '#register'"></button>
+  </div>
+
+  <!-- Footer-->
+  <footer class="bg-black text-center py-5">
+    <div class="container px-5">
+      <div class="text-light small">
+        <div class="mb-2">&copy; Copyright 2023 Singapore Management University. All Rights Reserved</div>
+        <a href="https://www.smu.edu.sg/terms-use">Privacy</a>
+        <span class="mx-1">&middot;</span>
+        <a href="https://www.smu.edu.sg/terms-use">Terms</a>
+        <span class="mx-1">&middot;</span>
+        <a href="https://www.smu.edu.sg/forms/contact-data-protection-officer">Contact Data Protection Officer</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Feedback Modal-->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark p-4">
+          <h5 class="modal-title font-alt text-light" id="feedbackModalLabel">Our Social Media Accounts</h5>
+          <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body border-0 p-4 bg-light text-center">
+          <a class="btn btn-primary" style="background-color: #0088cc;" href="https://t.me/+uidMF-RdurM3YTI1"
+            role="button">
+            <i class="bi bi-telegram"></i> Telegram - SMUX Skaters
+          </a>
+          <a class="btn btn-primary mt-2" style="background-color: #ac2bac;"
+            href="https://www.instagram.com/smuxskating" role="button">
+            <i class="bi bi-instagram"></i> Instagram - SMUX Skating
+          </a>
+          <a class="btn btn-primary mt-2" style="background-color: #ac2bac;"
+            href="https://www.instagram.com/smuskatathon" role="button">
+            <i class="bi bi-instagram"></i> Instagram - SMU Skatathon
+          </a>
+          <a class="btn btn-primary mt-2" style="background-color: #4267B2;"
+            href="https://www.facebook.com/profile.php?id=100094278242777" role="button">
+            <i class="bi bi-facebook"></i> Facebook - SMU Skatathon
+          </a>
+        </div>
+        <div class="modal-footer bg-light"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <!-- Confetti JS-->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Hero related JS-->
+  <script src="js/hero.js"></script>
+  <!-- Timings related JS-->
+  <script src="js/timings.js"></script>
+</body>
+
+</html>
